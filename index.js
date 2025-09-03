@@ -19,3 +19,5 @@ sequelize.sync().then(() => {
     //     console.log(`Server running on port ${process.env.PORT}`);
     // });
 });
+
+module.exports = app;
