@@ -7,7 +7,7 @@ const bikeRoutes = require('./src/routes/bikeRoutes');
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 
 app.use('/auth', authRoutes);
@@ -20,9 +20,9 @@ app.use('/bikes', bikeRoutes);
 //     });  
 // });
 
-// sequelize.authenticate()
-//   .then(() => console.log("✅ Database connected"))
-//   .catch(err => console.error("❌ Database connection failed:", err));
+sequelize.authenticate()
+  .then(() => console.log("✅ Database connected"))
+  .catch(err => console.error("❌ Database connection failed:", err));
 
 
 module.exports = app;
